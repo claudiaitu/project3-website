@@ -224,7 +224,7 @@ h3 {
 
 .form.form-box{
   padding: 25px;
-  background-color: #77dd77;
+  background-color: #9fdf9f;
   padding: 25px;
 }
 
@@ -289,4 +289,37 @@ h3 {
   .heading p {
     font-size: 1.5rem;
   }
+}
+
+.prof {
+  color: #9fdf9f;
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.items-wrap {
+  line-height: 1.5;
+  display: flex;
+  gap: 20px;
+}
+
+.items-wrap .item-box {
+  flex: 1;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.btns-wrap{
+  display: flex;
+  gap: 5px;
+}
+.btns-wrap btn {
+
+  flex: 1;
+} 
+.btns-wrap .btn-edit{
+  background-color: transparent;
+  color: black;
 }

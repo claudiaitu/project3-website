@@ -20,17 +20,20 @@ const Profile = () => {
 
   return (
     <>
-    <div>Profile</div>
-    <div>
+    <div className='prof'>Profile</div>
+    <div className="items-wrap">
       {user ? user.registries.map((registry) => {
         return (
           <>
+          <div className='item-box'>
             <h2>Title: {registry.title}</h2>
             <p>Price: {registry.price}</p>
             <p>Description: {registry.description}</p>
-            <Link to={`/edit-registry/${registry._id}`}>Edit</Link>
-            <button onClick={() => deleteRegistry(registry._id)}>Delete</button>
-
+            <div className="btns-wrap">
+              <Link className="btn btn-edit" to={`/edit-registry/${registry._id}`}>Edit</Link>
+              <button className="btn btn-delete" onClick={() => deleteRegistry(registry._id)}>Delete</button>
+            </div>
+          </div>
           </>
         )
       }):
