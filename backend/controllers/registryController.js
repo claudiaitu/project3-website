@@ -1,15 +1,14 @@
 const asyncHandler = require('express-async-handler')
-
-const Goal = require('../models/goalModel')
+const Registry = require('../models/registryModel')
 const User = require('../models/userModel')
 
 // @desc    Get goals
 // @route   GET /api/goals
 // @access  Private
 const getGoals = asyncHandler(async (req, res) => {
-  const goals = await Goal.find({ user: req.user.id })
+  const items = await Registry.find({ user: req.user.id })
 
-  res.status(200).json(goals)
+  res.status(200).json(items)
 })
 
 // @desc    Set goal
@@ -21,23 +20,23 @@ const setGoal = asyncHandler(async (req, res) => {
     throw new Error('Please add a text field')
   }
 
-  const goal = await Goal.create({
+  const registry = await Registry.create({
     text: req.body.text,
     user: req.user.id,
   })
 
-  res.status(200).json(goal)
+  res.status(200).json(registry)
 })
 
 // @desc    Update goal
 // @route   PUT /api/goals/:id
 // @access  Private
 const updateGoal = asyncHandler(async (req, res) => {
-  const goal = await Goal.findById(req.params.id)
+  const goal = await Registry.findById(req.params.id)
 
   if (!goal) {
     res.status(400)
-    throw new Error('Goal not found')
+    throw new Error('Registry not found')
   }
 
   // Check for user
@@ -52,7 +51,7 @@ const updateGoal = asyncHandler(async (req, res) => {
     throw new Error('User not authorized')
   }
 
-  const updatedGoal = await Goal.findByIdAndUpdate(req.params.id, req.body, {
+  const updatedGoal = await Registry.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   })
 
@@ -63,11 +62,11 @@ const updateGoal = asyncHandler(async (req, res) => {
 // @route   DELETE /api/goals/:id
 // @access  Private
 const deleteGoal = asyncHandler(async (req, res) => {
-  const goal = await Goal.findById(req.params.id)
+  const goal = await Registry.findById(req.params.id)
 
   if (!goal) {
     res.status(400)
-    throw new Error('Goal not found')
+    throw new Error('Registry not found')
   }
 
   // Check for user

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const Goals = require('../models/MyRegistry');
+const Registry = require('../models/registryModel');
 
 const isOwner = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
@@ -13,7 +13,7 @@ const isOwner = (req, res, next) => {
     req.user = tokenInfo;
 
     const goalsId = req.params.goalsId;
-    Goals.findById(goalsId)
+    Registry.findById(goalsId)
       .then((goals) => {
         if (!goals) {
           return res.status(404).json({ message: "Goals not found" });

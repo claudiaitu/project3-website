@@ -3,13 +3,14 @@ import { Routes, Route, Link, Navigate, Outlet } from "react-router-dom";
 
 import Navbar from './components/Navbar';
 
-import EditPost from './pages/EditPost';
+import EditRegistry from './pages/EditRegistry';
 import EditProfile from './pages/EditProfile';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import NewGoalForm from './pages/NewGoalForm';
 import Profile from './pages/Profile'
 import Signup from './pages/Signup'
+import MyRegistry from './pages/MyRegistry'
+
 
 
 const App = () => {
@@ -38,10 +39,11 @@ const App = () => {
             
             <Route element={<LoggedIn />}>
 
-              <Route path='/post/:id' element={<EditPost />} />
+              <Route path='/edit-registry/:id' element={<EditRegistry />} />
               <Route path='/edit-profile/:id' element={<EditProfile />} />
-              <Route path='/new-goal-form' element={<NewGoalForm />} />
+              {/* <Route path='/new-goal-form' element={<NewGoalForm />} /> */}
               <Route path='/profile/:id' element={<Profile />} />
+              <Route path='/my-registry' element={<MyRegistry />} />
             
             </Route> 
 

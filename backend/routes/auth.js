@@ -83,9 +83,10 @@ router.post("/login", (req, res, next) => {
 router.get("/verify", isAuthenticated, (req, res) => {
 
   User.findOne({_id: req.user._id})
-  .populate('goals')
-  .populate({path: 'posts', 
-  })
+  .populate('registries')
+  // .populate('goals')
+  // .populate({path: 'posts', 
+  // })
   .then((foundUser) => {
 
     const payload = { ...foundUser };

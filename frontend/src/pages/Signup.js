@@ -2,7 +2,7 @@ import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { post } from "../services/authService"
 import { AuthContext } from "../context/auth.context"
-import { LoadingContext } from "../context/loading.context"
+// import { LoadingContext } from "../context/loading.context"
 
 const Signup = () => {
     const { authenticateUser } = useContext(AuthContext)

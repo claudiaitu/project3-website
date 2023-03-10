@@ -41,9 +41,9 @@ const AuthProvider = ({ children }) => {
                 setUser(null);
             }
 
-            console.log("This is the user", user)
-    }
-
+        }
+        
+        console.log("This is the user", user)
     const logout = () => {
         localStorage.clear();
         setMessage("You are logged out.");

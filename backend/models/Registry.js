@@ -7,9 +7,18 @@ const registrySchema = mongoose.Schema(
       required: true,
       ref: 'User',
     },
-    text: {
+    title: {
       type: String,
       required: [true, 'Please add a text value'],
+    },
+    price: {
+      type: Number, 
+    }, 
+    description: {
+      type: String,
+    },
+    image: {
+      type: String,
     },
   },
   {

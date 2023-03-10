@@ -17,7 +17,7 @@ a {
 }
 
 p {
-  line-height: 1.7;
+  /* line-height: 1.7; */
 }
 
 ul {
@@ -47,9 +47,8 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 15px 25px;
   border-bottom: 1px solid #e6e6e6;
-  margin-bottom: 60px;
 }
 
 .navbar ul {
@@ -78,7 +77,7 @@ h3 {
 .heading {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   padding: 0 20px;
 }
 
@@ -191,6 +190,84 @@ h3 {
   animation: spin 1.2s linear infinite;
 }
 
+.login-container-bg{
+  background-image: url(../public/images/wedding-mountains-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 70px);
+  padding-top: 50px;
+}
+
+.login-box{
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px;
+}
+
+.banner-sm{
+  background-image: url(../public/images/table-set-wedding.jpg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  position: relative;
+  color: #FFF;
+  padding: 0px;
+}
+.banner-sm .overlay-dark h1, .banner-sm .overlay-dark p {
+  color: white;
+}
+.banner-sm .overlay-dark {
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form.form-box{
+  padding: 25px;
+  background-color: #77dd77;
+  padding: 25px;
+}
+
+.box-flex {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+}
+.box {
+  border: 1px solid black;
+  padding: 25px 25px 75px 25px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-flex .box p.description {
+  flex: 1;
+  font-size: 16px;
+  color: black;
+}
+.box-flex .box h2.title {
+  flex: 1;
+  font-size: 24px;
+  color: black;
+}
+
+.box-flex .box a {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
+  width: 200px;
+}
+
+.nav-link{
+  padding: 5px 5px;
+  margin: 0 5px;
+  border: 1px solid black;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

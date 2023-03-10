@@ -9,7 +9,7 @@ var cors = require('cors');
 
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-
+var registryRouter = require('./routes/registry');
 var app = express();
 
 app.set('trust proxy', 1);
@@ -29,6 +29,7 @@ app.use(
 
 app.use('/auth', authRouter);
 app.use('/users', usersRouter);
+app.use('/registry', registryRouter);
 
 app.use(function (req, res, next) {
     next(createError(404));
