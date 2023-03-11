@@ -20,14 +20,15 @@ const Profile = () => {
 
   return (
     <>
-    <div className='prof'>Profile</div>
+    <div className='registry-container-bg'> 
+    <div className='prof'>My Gifts:</div>
     <div className="items-wrap">
       {user ? user.registries.map((registry) => {
         return (
           <>
           <div className='item-box'>
             <h2>Title: {registry.title}</h2>
-            <p>Price: {registry.price}</p>
+            <p>Price: $ {registry.price}</p>
             <p>Description: {registry.description}</p>
             <div className="btns-wrap">
               <Link className="btn btn-edit" to={`/edit-registry/${registry._id}`}>Edit</Link>
@@ -39,6 +40,7 @@ const Profile = () => {
       }):
       <p>No registries found</p>
       }
+    </div>
     </div>
     </>
   )

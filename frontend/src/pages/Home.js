@@ -21,7 +21,7 @@ const Home = () => {
                     <Link className="btn" to={'/my-registry'}>Build a Registry</Link>
                 </div>
                 <div className="box">
-                    <h2 className="title">Build a To-Do</h2>
+                    <h2 className="title">Build a To-Do List</h2>
                     <p className="description">Make sure to have everything ready for the big day!</p>
                     <Link className="btn" to={'/login'}>Build a list</Link>
                 </div>

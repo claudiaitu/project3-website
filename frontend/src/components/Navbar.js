@@ -11,21 +11,21 @@ const Navbar = () => {
         return localStorage.getItem("authToken")
     }
 
-    const { user, getGoals } = useContext(LoadingContext)
+    const { user } = useContext(LoadingContext)
 
     const { logout } = useContext(AuthContext)
 
     return (
         <nav className="navbar">
             <div>
-                <Link to={'/'}>The Knot</Link>
+                <Link to={'/'} className="logo">RegistryBuilder.com</Link>
             </div>
             {/* <Link onClick={getGoals} to={'/goals'}>All Goals</Link> */}
             
             {
                 getToken() ? 
                 <>
-                    {user && <Link to={`/profile/${user._id}`}>Profile</Link>}
+                    {user && <Link to={`/profile/${user._id}`}>My Profile</Link>}
                     {/* <Link to={'/new-goal-form'}>New Goal</Link> */}
                     
                     <button className="btn" onClick={logout}><FaSignOutAlt /> Logout</button>

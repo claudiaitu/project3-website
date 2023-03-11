@@ -4,12 +4,13 @@ import { Routes, Route, Link, Navigate, Outlet } from "react-router-dom";
 import Navbar from './components/Navbar';
 
 import EditRegistry from './pages/EditRegistry';
-import EditProfile from './pages/EditProfile';
+// import EditProfile from './pages/EditProfile';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile'
 import Signup from './pages/Signup'
 import MyRegistry from './pages/MyRegistry'
+import ToDoList from './pages/ToDoList';
 
 
 
@@ -40,10 +41,12 @@ const App = () => {
             <Route element={<LoggedIn />}>
 
               <Route path='/edit-registry/:id' element={<EditRegistry />} />
-              <Route path='/edit-profile/:id' element={<EditProfile />} />
+              {/* <Route path='/edit-profile/:id' element={<EditProfile />} /> */}
               {/* <Route path='/new-goal-form' element={<NewGoalForm />} /> */}
               <Route path='/profile/:id' element={<Profile />} />
               <Route path='/my-registry' element={<MyRegistry />} />
+              <Route path='/to-do-list' element={<ToDoList />} />
+              
             
             </Route> 
 

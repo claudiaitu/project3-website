@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 
-const NewGoalForm = () => {
+const ToDoList = () => {
 
   const [ text, setText ] = useState('')
 
@@ -12,11 +12,11 @@ const NewGoalForm = () => {
     
   }
   return (
-    <><div>New Goal</div>
+    <><div>New Task</div>
     <section className='form'>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
-          <label htmlFor='text'>Goal</label>
+          <label htmlFor='text'>Task</label>
           <input
             type='text'
             name='text'
@@ -26,7 +26,7 @@ const NewGoalForm = () => {
         </div>
         <div className='form-group'>
           <button className='btn btn-block' type='submit'>
-            Add Goal
+            Add Task
           </button>
         </div>
       </form>
@@ -36,4 +36,4 @@ const NewGoalForm = () => {
   
 
 
-export default NewGoalForm
+export default ToDoList;

@@ -35,6 +35,7 @@ function MyRegistry() {
 
 
   return (
+    <div className='add-registry-bg'>
     <section className='form form-box'>
       <form onSubmit={onSubmit}>
         <div className='form-group'>
@@ -88,6 +89,7 @@ function MyRegistry() {
         </div>
       </form>
     </section>
+    </div>
   )
 }
 
