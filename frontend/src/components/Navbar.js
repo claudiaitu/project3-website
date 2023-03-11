@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div>
-                <Link to={'/'} className="logo">RegistryBuilder.com</Link>
+                <Link to={'/'} className="logo" >RegistryBuilder.com</Link>
             </div>
             {/* <Link onClick={getGoals} to={'/goals'}>All Goals</Link> */}
             

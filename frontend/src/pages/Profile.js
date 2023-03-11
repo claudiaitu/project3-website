@@ -27,9 +27,10 @@ const Profile = () => {
         return (
           <>
           <div className='item-box'>
-            <h2>Title: {registry.title}</h2>
+            <h2>Item: {registry.item}</h2>
             <p>Price: $ {registry.price}</p>
             <p>Description: {registry.description}</p>
+            <img alt='img' src={registry.image}/>
             <div className="btns-wrap">
               <Link className="btn btn-edit" to={`/edit-registry/${registry._id}`}>Edit</Link>
               <button className="btn btn-delete" onClick={() => deleteRegistry(registry._id)}>Delete</button>

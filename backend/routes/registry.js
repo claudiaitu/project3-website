@@ -8,11 +8,11 @@ const Registry = require('../models/Registry');
 
 router.post('/add-registry/:userId', async (req, res, next) => {
     const createdRegistry = await Registry.create({
-        title: req.body.title,
+        item: req.body.item,
         price: req.body.price,
         description: req.body.description,
-        user: req.params.userId
-        // image: req.file.image
+        user: req.params.userId,
+        image: req.body.image
     })
     const findUserandUpdate = await User.findByIdAndUpdate(req.params.userId, {$push:{registries: createdRegistry._id}}, {new: true}).populate('registries')
     console.log(findUserandUpdate)
@@ -23,11 +23,11 @@ router.post('/add-registry/:userId', async (req, res, next) => {
 router.post('/edit-registry/:registryId/:userId', async (req, res, next) => {
     try {
         const updateRegistry = await Registry.findByIdAndUpdate( req.params.registryId, {
-            title: req.body.title,
+            item: req.body.item,
             price: req.body.price,
             description: req.body.description,
-            user: req.params.userId
-            // image: req.file.image
+            user: req.params.userId,
+            image: req.file.image
         }, {new: true})
         const findUser = await User.findById(req.params.userId) .populate('registries')
         res.json(findUser)

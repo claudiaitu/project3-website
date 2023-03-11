@@ -12,6 +12,7 @@ var authRouter = require('./routes/auth');
 var registryRouter = require('./routes/registry');
 var toDoRouter = require('./routes/toDo');
 var app = express();
+var uploadImage = require('./routes/uploadImage')
 
 app.set('trust proxy', 1);
 app.enable('trust proxy');
@@ -32,6 +33,7 @@ app.use('/auth', authRouter);
 app.use('/users', usersRouter);
 app.use('/registry', registryRouter);
 app.use('/toDo', toDoRouter);
+app.use('/upload', uploadImage);
 
 app.use(function (req, res, next) {
     next(createError(404));

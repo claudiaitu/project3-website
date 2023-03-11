@@ -23,7 +23,7 @@ const Home = () => {
                 <div className="box">
                     <h2 className="title">Build a To-Do List</h2>
                     <p className="description">Make sure to have everything ready for the big day!</p>
-                    <Link className="btn" to={'/login'}>Build a list</Link>
+                    <Link className="btn" to={'/to-do-list'}>Build a list</Link>
                 </div>
               </div>
             </section>

@@ -4,13 +4,13 @@ import { createGoal } from '../features/goals/goalSlice'
 
 function RegistryForm() {
   const [formData, setFormData] = useState({
-    title: '',
+    item: '',
     text: '',
     price: '',
     image: '',
   })
   
-  const { title, text, price, image } = formData
+  const { item, text, price, image } = formData
 
   const dispatch = useDispatch()
 
@@ -23,7 +23,7 @@ function RegistryForm() {
   const onSubmit = (e) => {
     e.preventDefault()
     const goalData = {
-      title,
+      item,
       text,
       image,
       price
@@ -51,13 +51,13 @@ function RegistryForm() {
                      
         </div>
         <div className='form-group'>
-          <label htmlFor='title'>Title:</label>
+          <label htmlFor='item'>Item:</label>
           <input
             type='text'
-            name='title'
-            id='title'
-            value={title}
-            onChange={(e) => updateForm({ title: e.target.value })}
+            name='item'
+            id='item'
+            value={item}
+            onChange={(e) => updateForm({ item: e.target.value })}
           />
         </div>
         <div className='form-group'>

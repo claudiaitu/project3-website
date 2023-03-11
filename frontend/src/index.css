@@ -325,13 +325,22 @@ h3 {
   line-height: 1.5;
   display: flex;
   gap: 20px;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  
 }
 
 .items-wrap .item-box {
-  flex: 1;
+  /* flex: 1; */
   border: 1px solid black;
   padding: 20px;
   background-color: #f8f8ff;
+  
+}
+
+.item-box {
+  width: 20vw;
+  
 }
 
 .btns-wrap{
@@ -351,5 +360,5 @@ h3 {
   font-size: 25px;
   font-weight: 700;
   text-decoration: underline;
-  color: #556b2f;
+  color: black;
 }

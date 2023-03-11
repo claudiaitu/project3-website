@@ -17,6 +17,8 @@ const userSchema = mongoose.Schema(
     },
     registries: 
       [{type: mongoose.Schema.Types.ObjectId, ref: "Registry"}],
+    tasks: 
+    [{type: mongoose.Schema.Types.ObjectId, ref: "ToDo"}]
   },
   {
     timestamps: true,
